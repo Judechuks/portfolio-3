@@ -128,7 +128,6 @@ h3 {font-size: var(--fs-h3);}
 header{
   display: flex;
   justify-content: space-between;
-  /* padding: 1em; */
 }
 .nav{
   position: fixed;
@@ -296,10 +295,12 @@ header{
 .about-me__img{
   box-shadow: var(--bs);
 }
+.about-me .btn{
+  width: fit-content;
+}
 .section__subtitle--about{
   font-weight: var(--fw-bold);
 }
-
 @media (min-width: 600px) {
   .about-me{
     display: grid;
@@ -409,4 +410,31 @@ header{
   text-align: center;
   font-size: 1.8rem;
   font-weight: var(--fw-bold);
+}
+ /*=== TABLET AND MOBILE NAV VIEW ===*/
+@media (min-width: 700px){  
+  header{
+    background: var(--clr-dark);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .nav{
+    position: relative;
+    transform: none;
+    margin-right: 1rem;
+    background: transparent;
+  }
+  .nav__list{
+    display: inline-block;
+  }
+  .nav .nav__list li{
+    display: inline-block;
+    margin: auto 1rem;
+  }
+  .nav .nav__list li a{
+    font-size: var(--fs-h3);
+  }
+  .nav-toggle{
+    display: none;
+  }
 }
